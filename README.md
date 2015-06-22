@@ -1,6 +1,8 @@
 ZikulaSpecModule
 ============
 
+### Beta (for discussion)
+
 This is a module depicting the Core-2.0.0 Extension specification.
 
 This is a module, but themes would share the same specification.

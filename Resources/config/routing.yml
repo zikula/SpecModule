@@ -1,0 +1,3 @@
+zikulaspecmodule:
+    resource: "@ZikulaSpecModule/Controller"
+    type:     annotation

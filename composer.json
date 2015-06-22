@@ -1,0 +1,34 @@
+{
+    "name": "zikula/specmodule-module",
+    "version": "2.0.0-beta",
+    "description": "A module depicting the Core-2.0.0 Extension specification.",
+    "type": "zikula-module",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Zikula Team",
+            "homepage": "http://zikula.org/"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Zikula\\SpecModule\\": "" }
+    },
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "extra": {
+        "zikula": {
+            "core-compatibility": "~1.4",
+            "class": "Zikula\\SpecModule\\ZikulaSpecModule",
+            "displayname": "SpecModule",
+            "url": "spec",
+            "oldnames": [],
+            "capabilities": {
+                "user": {"route": "zikulaspecmodule_default_index"}
+            },
+            "securityschema": {
+                "ZikulaSpecModule::": "::"
+            }
+        }
+    }
+}

@@ -1,0 +1,1 @@
+The contents of the `/public` directory will be copied to the `src/web` directory of the core and assets are used from there.

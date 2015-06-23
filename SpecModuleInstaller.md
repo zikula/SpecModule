@@ -1,4 +1,4 @@
-Filename: <Name><Type>Installer.php (can be changed if method `getInstallerClass` is overridden in Bundle class.)
+Filename: `<Name><Type>Installer.php` (can be changed if method `getInstallerClass` is overridden in Bundle class.)
 
 Status: Required
 

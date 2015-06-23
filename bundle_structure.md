@@ -1,3 +1,4 @@
+```
 SpecBundle/
     Block/
         FooBlock.php
@@ -46,6 +47,7 @@ SpecBundle/
     README.md
     composer.json (required)
     phpunit.xml.dist
-    
+```
+
 note: Api is not a required structural item and can be best replaced by services. Other optional items are allowed
 see various examples (in Zikula and Symfony ecosystems) for ideas on best practice for structural design.

@@ -24,7 +24,8 @@
             "url": "spec",
             "oldnames": [],
             "capabilities": {
-                "user": {"route": "zikulaspecmodule_default_index"}
+              "user": {"route": "zikulaspecmodule_foo_index"},
+              "admin": {"route": "zikulaspecmodule_bar_index"}
             },
             "securityschema": {
                 "ZikulaSpecModule::": "::"

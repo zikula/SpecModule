@@ -8,7 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route; // used in annotatio
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method; // used in annotations - do not remove
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template; // used in annotations - do not remove
 
-class DefaultController extends AbstractController
+class FooController extends AbstractController
 {
     /**
      * @Route("/hello/{name}")

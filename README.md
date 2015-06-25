@@ -20,8 +20,8 @@ SpecBundle/
     Controller/
         FooController.php
         BarController.php
-    DenpendencyInjection/
-        ZikulaSpecExtension.php
+    DependencyInjection/
+        ZikulaSpecExtension.php (required if services are used)
     Entity/
         FooEntity.php
     Form/
@@ -34,15 +34,18 @@ SpecBundle/
     Resources/
         config/
             routing.yml (required if controllers used)
+            services.xml (required if services are used)
         docs/
-            foo.txt
+            index.rst
+        meta/
+            LICENSE
         public/
             css/
             images/
             js/
         translations/
             messages.en.pot
-            zikulaspecmodule.en.pot
+            zikulaspecmodule.pot
         views/
             Bar/
                 index.html.twig
@@ -58,7 +61,6 @@ SpecBundle/
     SpecModuleInstaller.php (required)
     ZikulaSpecModule.php (required)
     CHANGELOG.md
-    LICENSE
     README.md
     composer.json (required)
     phpunit.xml.dist

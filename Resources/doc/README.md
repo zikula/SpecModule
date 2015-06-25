@@ -1,0 +1,1 @@
+`index.rst` is mandatory according to symfony docs.

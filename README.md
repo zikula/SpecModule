@@ -69,5 +69,5 @@ SpecBundle/
 note: Api is not a required structural item and can be best replaced by services. Other optional items are allowed
 see various examples (in Zikula and Symfony ecosystems) for ideas on best practice for structural design.
 
-note: There is no longer a `Version.php` file. All this data is moved to the `composer.json` file and hook
+note: There is no longer a `FooModuleVersion.php` file. All this data is moved to the `composer.json` file and hook
 registration is moved to a Helper class.

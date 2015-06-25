@@ -1,3 +1,5 @@
+@see [Symfony Best Practices](http://symfony.com/doc/current/cookbook/bundles/best_practices.html)
+
 ```
 SpecBundle/
     Block/

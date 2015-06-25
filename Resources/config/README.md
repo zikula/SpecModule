@@ -1,3 +1,9 @@
+## config
+
+### routing.yml
+This `routing.yml` file is **required** in order to allow for the core to scan this extension for route annotations.
+
+### services.xml
 reference: http://symfony.com/doc/current/book/service_container.html
 
 The `services.xml` file contains definitions of any service you choose to create in your Extension.

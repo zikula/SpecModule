@@ -1,1 +1,0 @@
-This routing.yml file is required in order to allow for the core to scan this extension for annotations and routes.

@@ -2,7 +2,7 @@ Filename: `composer.json`
 
 Status: Required
 
-Description: define the extension and various features and capabilities. Specific keys are required and others are optional.\
+Description: define the extension and various features and capabilities. Specific keys are required and others are optional.
 The composer.json file is also used by composer and packagist to enable package installation.
 
 Please see the [Official JSON Schema](https://getcomposer.org/doc/04-schema.md) for full details on most items

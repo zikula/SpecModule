@@ -10,7 +10,7 @@ Please see the [Official JSON Schema](https://getcomposer.org/doc/04-schema.md) 
  - name: (required) can be anything, but typically `<vendor>/<name>-<type>`
  - version: (required) must adhere to [semver requirements](http://semver.org).
  - description: (required) a one sentence description of the extension (translatable)
- - type: (required) zikula-module|zikula-theme|zikula-plugin
+ - type: (required) zikula-module
  - license: (required) License name (string) or an array of license names (array of strings) under which the extension 
    is provided. You must use the standardized identifier acronym for the license as defined by 
    [Software Package Data Exchange](http://spdx.org/licenses/)

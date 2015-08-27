@@ -15,6 +15,7 @@ class BarController extends AbstractController
     /**
      * @Route("/admin/hello/{name}")
      * @Admin
+     * @Template
      * @param Request $request
      * @param string $name
      * @return array
@@ -23,6 +24,7 @@ class BarController extends AbstractController
     {
         $request->attributes->set('_legacy', true); // forces template to render inside old theme
 //        return $this->render('ZikulaSpecModule:Bar:index.html.twig', array('name' => $name), new AdminResponse());
-        return $this->render('@ZikulaSpecModule/Bar/index.html.twig', array('name' => $name)); //, new AdminResponse());
+//        return $this->render('@ZikulaSpecModule/Bar/index.html.twig', array('name' => $name));
+        return array('name' => $name);
     }
 }

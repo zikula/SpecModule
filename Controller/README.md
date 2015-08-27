@@ -9,7 +9,7 @@ Methods must have `Action` suffice, e.g. `indexAction()` or `viewAction`
 
 Methods must return a Symfony Response object
 
- - methods desiring theming in the selected Admin theme must return Zikula AdminResponse
+ - methods desiring specific theming must use an appropriate annotation (e.g. @Admin)
  - using `$request->attributes->set('_legacy', true);` will theme with smarty legacy engine (Core < 2.0)
  
 Utilize annotations in controller methods to define **routes**, **parameterConverters** and even **Template**

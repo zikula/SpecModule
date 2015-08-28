@@ -21,7 +21,6 @@ class BarController extends AbstractController
      */
     public function indexAction(Request $request, $name = 'no name')
     {
-        $request->attributes->set('_legacy', true); // forces template to render inside old theme
 //        return $this->render('ZikulaSpecModule:Bar:index.html.twig', array('name' => $name));
 //        return $this->render('@ZikulaSpecModule/Bar/index.html.twig', array('name' => $name));
         return ['name' => $name];

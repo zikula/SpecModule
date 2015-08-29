@@ -19,7 +19,8 @@ class FooController extends AbstractController
      */
     public function indexAction(Request $request, $name = 'no name')
     {
-        $request->attributes->set('_legacy', true); // forces template to render inside old theme
-        return array('name' => $name);
+//        return $this->render('ZikulaSpecModule:Foo:index.html.twig', array('name' => $name));
+//        return $this->render('@ZikulaSpecModule/Foo/index.html.twig', array('name' => $name));
+        return ['name' => $name];
     }
 }

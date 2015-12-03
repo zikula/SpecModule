@@ -13,23 +13,34 @@
 
 namespace Zikula\SpecModule\Block;
 
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Zikula\Core\BlockControllerInterface;
 
 /**
- * Class BarBlock
+ * Class ServiceDefinedBlock
  * @package Zikula\SpecModule\Block
  */
-class BarBlock implements BlockControllerInterface
+class ServiceDefinedBlock implements BlockControllerInterface
 {
+    private $container;
+
+    /**
+     * ServiceDefinedBlock constructor.
+     */
+    public function __construct(ContainerInterface $container)
+    {
+        $this->container = $container;
+    }
+
     public function getType()
     {
-        return 'Bar';
+        return 'ServiceDefined';
     }
 
     public function display($content)
     {
-        return "<div><strong>Bar Block!</strong></div>";
+        return "<div><strong>Environment: " . $this->container->getParameter('env') . "</strong></div>";
     }
 
     public function modify(Request $request, $content)

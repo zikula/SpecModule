@@ -10,5 +10,9 @@
             <argument type="service" id="router" />
             <tag name="zikula.link_container" />
         </service>
+
+        <service id="zikula.spec_module.block.service_defined_block" class="Zikula\SpecModule\Block\ServiceDefinedBlock">
+            <argument type="service" id="service_container" />
+        </service>
     </services>
 </container>

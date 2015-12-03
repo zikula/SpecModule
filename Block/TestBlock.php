@@ -18,7 +18,8 @@ use Zikula\SpecModule\Block\Form\Type\TestBlockType;
 use Zikula\Core\Controller\AbstractBlockController;
 
 /**
- * Test Block
+ * Class TestBlock
+ * @package Zikula\SpecModule\Block
  */
 class TestBlock extends AbstractBlockController
 {

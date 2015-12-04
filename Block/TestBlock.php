@@ -23,10 +23,7 @@ use Zikula\Core\Controller\AbstractBlockController;
  */
 class TestBlock extends AbstractBlockController
 {
-    public function getType()
-    {
-        return $this->__('Test');
-    }
+    // getType() intentionally unimplemented for demonstration purposes.
 
     public function display($content)
     {

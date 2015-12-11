@@ -17,6 +17,8 @@ use Symfony\Component\HttpFoundation\Request;
 use Zikula\Core\BlockControllerInterface;
 
 /**
+ * Example block to demonstrate a 'bare bones' block requiring only the interface.
+ *
  * Class BarBlock
  * @package Zikula\SpecModule\Block
  */

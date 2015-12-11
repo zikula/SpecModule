@@ -21,6 +21,9 @@ class FooController extends AbstractController
     {
 //        return $this->render('ZikulaSpecModule:Foo:index.html.twig', array('name' => $name));
 //        return $this->render('@ZikulaSpecModule/Foo/index.html.twig', array('name' => $name));
-        return ['name' => $name];
+        $perm = $this->hasPermission('ZikulaSpecModule::', '::', ACCESS_ADMIN, 1);
+        $oldPerm = \SecurityUtil::checkPermission('ZikulaSpecModule::', '::', ACCESS_ADMIN, 1);
+
+        return ['name' => $name, 'perms' => ['old' => $oldPerm, 'new' =>$perm]];
     }
 }

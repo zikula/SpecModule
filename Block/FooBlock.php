@@ -14,14 +14,16 @@
 namespace Zikula\SpecModule\Block;
 
 use Symfony\Component\HttpFoundation\Request;
-use Zikula\SpecModule\Block\Form\Type\TestBlockType;
+use Zikula\SpecModule\Block\Form\Type\FooBlockType;
 use Zikula\Core\Controller\AbstractBlockController;
 
 /**
- * Class TestBlock
+ * Example block to demonstrate usage of AbstractBlockController and Symfony Form.
+ *
+ * Class FooBlock
  * @package Zikula\SpecModule\Block
  */
-class TestBlock extends AbstractBlockController
+class FooBlock extends AbstractBlockController
 {
     // getType() intentionally unimplemented for demonstration purposes.
 
@@ -29,18 +31,18 @@ class TestBlock extends AbstractBlockController
     {
         $content = nl2br(implode("\n", $content));
 
-        return $this->renderView('ZikulaSpecModule:Block:test.html.twig', ['content' => $content]);
+        return $this->renderView('ZikulaSpecModule:Block:foo.html.twig', ['content' => $content]);
     }
 
     public function modify(Request $request, $content)
     {
         $defaults = [
-            'myfield' => 'default field value.',
-            'mycheckbox' => true,
-            'content' => '',
+            'sentence' => 'The cheesecake exploded.',
+            'status' => true,
+            'more' => '',
         ];
         $vars = array_merge($defaults, $content);
-        $form = $this->createForm('Zikula\SpecModule\Block\Form\Type\TestBlockType', $vars);
+        $form = $this->createForm('Zikula\SpecModule\Block\Form\Type\FooBlockType', $vars);
         $form->handleRequest($request);
         if ($form->isValid()) {
 

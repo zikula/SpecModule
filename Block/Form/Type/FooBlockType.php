@@ -16,19 +16,22 @@ namespace Zikula\SpecModule\Block\Form\Type;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 
-class TestBlockType extends AbstractType
+/**
+ * Class FooBlockType
+ * @package Zikula\SpecModule\Block\Form\Type
+ */
+class FooBlockType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('myfield', 'Symfony\Component\Form\Extension\Core\Type\TextType', [
-                'label' => __('My field label')
+            ->add('sentence', 'Symfony\Component\Form\Extension\Core\Type\TextType', [
+                'label' => __('Sentence label')
             ])
-            ->add('mycheckbox', 'Symfony\Component\Form\Extension\Core\Type\CheckboxType', [
+            ->add('status', 'Symfony\Component\Form\Extension\Core\Type\CheckboxType', [
                 'required' => false,
-                'label' => __('My checkbox label')
             ])
-            ->add('content', 'Symfony\Component\Form\Extension\Core\Type\TextareaType', [
+            ->add('more', 'Symfony\Component\Form\Extension\Core\Type\TextareaType', [
                 'required' => false
             ])
         ;
@@ -36,6 +39,6 @@ class TestBlockType extends AbstractType
 
     public function getName()
     {
-        return 'zikulaspecmodule_testblock';
+        return 'zikulaspecmodule_fooblock';
     }
 }

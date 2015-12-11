@@ -18,19 +18,27 @@ use Symfony\Component\HttpFoundation\Request;
 use Zikula\Core\BlockControllerInterface;
 
 /**
+ * Example block that utilizes dependencies from the container.
+ *   @see /modules/SpecModule/Resources/config/services.xml
+ *
+ *         <service id="zikula.spec_module.block.service_defined_block" class="Zikula\SpecModule\Block\ServiceDefinedBlock">
+ *             <argument>%kernel.environment%</argument>
+ *             <tag name="zikula.block" module="ZikulaSpecModule" />
+ *         </service>
+ *
  * Class ServiceDefinedBlock
  * @package Zikula\SpecModule\Block
  */
 class ServiceDefinedBlock implements BlockControllerInterface
 {
-    private $container;
+    private $env;
 
     /**
      * ServiceDefinedBlock constructor.
      */
-    public function __construct(ContainerInterface $container)
+    public function __construct($env)
     {
-        $this->container = $container;
+        $this->env = $env;
     }
 
     public function getType()
@@ -40,7 +48,7 @@ class ServiceDefinedBlock implements BlockControllerInterface
 
     public function display($content)
     {
-        return "<div><strong>Environment: " . $this->container->getParameter('env') . "</strong></div>";
+        return "<div><strong>Environment: " . $this->env . "</strong></div>";
     }
 
     public function modify(Request $request, $content)

@@ -24,8 +24,9 @@
             "url": "spec",
             "oldnames": [],
             "capabilities": {
-              "user": {"route": "zikulaspecmodule_foo_index"},
-              "admin": {"route": "zikulaspecmodule_bar_index"}
+                "hook_subscriber": {"class": "Zikula\\SpecModule\\Container\\HookContainer"},
+                "user": {"route": "zikulaspecmodule_foo_index"},
+                "admin": {"route": "zikulaspecmodule_bar_index"}
             },
             "securityschema": {
                 "ZikulaSpecModule::": "::"

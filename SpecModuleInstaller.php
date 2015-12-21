@@ -3,9 +3,10 @@
 namespace Zikula\SpecModule;
 
 use Zikula\Core\AbstractBundle;
-use Zikula\Core\ExtensionInstallerInterface;
+use Zikula\SpecModule\Container\HookContainer;
+use Zikula\Core\AbstractExtensionInstaller;
 
-class SpecModuleInstaller implements ExtensionInstallerInterface
+class SpecModuleInstaller extends AbstractExtensionInstaller
 {
     public function setBundle(AbstractBundle $bundle)
     {
@@ -14,6 +15,8 @@ class SpecModuleInstaller implements ExtensionInstallerInterface
 
     public function install()
     {
+        $hookContainer = $this->hookApi->getHookContainerInstance($this->bundle->getMetaData());
+        \HookUtil::registerSubscriberBundles($hookContainer->getHookSubscriberBundles());
         return true;
     }
 
@@ -24,6 +27,8 @@ class SpecModuleInstaller implements ExtensionInstallerInterface
 
     public function uninstall()
     {
+        $hookContainer = $this->hookApi->getHookContainerInstance($this->bundle->getMetaData());
+        \HookUtil::unregisterSubscriberBundles($hookContainer->getHookSubscriberBundles());
         return true;
     }
 }

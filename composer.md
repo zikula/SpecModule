@@ -27,8 +27,8 @@ Please see the [Official JSON Schema](https://getcomposer.org/doc/04-schema.md) 
      - capabilities: (required if controllers are used) an object of objects defining capabilities of the extension
          - user: (required if user capable controller) an object defining the default route `{route: zikulaspecmodule_default_index}`
          - admin: (required if admin capable controller) an object defining the default route `{route: zikulaspecmodule_admin_index}`
-         - hook_subscriber: (required if hook subscriber) and object like so: `{enabled: true}`
-         - hook_provider: (required if hook provider) and object like so: `{enabled: true}`
+         - hook_subscriber: (required if hook subscriber) an object like so: `{"class": "Zikula\\SpecModule\\Helper\\HookContainer"}`
+         - hook_provider: (required if hook provider) an object like so: `{"class": "Zikula\\SpecModule\\Helper\\HookContainer"}`
          - searchable: (required if searchable) an object defining the search class helper `{class: Zikula\\SpecModule\\Helper\\SearchHelper}`
          - categorizable: (required if entities support categorization) and array of Fully Qualified entity classnames
      - securityschema: (required) An object of security schemes

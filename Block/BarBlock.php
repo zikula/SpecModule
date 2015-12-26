@@ -14,7 +14,7 @@
 namespace Zikula\SpecModule\Block;
 
 use Symfony\Component\HttpFoundation\Request;
-use Zikula\Core\BlockControllerInterface;
+use Zikula\Core\BlockHandlerInterface;
 
 /**
  * Example block to demonstrate a 'bare bones' block requiring only the interface.
@@ -22,19 +22,19 @@ use Zikula\Core\BlockControllerInterface;
  * Class BarBlock
  * @package Zikula\SpecModule\Block
  */
-class BarBlock implements BlockControllerInterface
+class BarBlock implements BlockHandlerInterface
 {
     public function getType()
     {
         return 'Bar';
     }
 
-    public function display($content)
+    public function display(array $properties)
     {
         return "<div><strong>Bar Block!</strong></div>";
     }
 
-    public function modify(Request $request, $content)
+    public function modify(Request $request, array $properties)
     {
         return "This block provides no configurable options.";
     }

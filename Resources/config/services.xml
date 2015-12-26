@@ -13,7 +13,7 @@
 
         <service id="zikula.spec_module.block.service_defined_block" class="Zikula\SpecModule\Block\ServiceDefinedBlock">
             <argument>%kernel.environment%</argument>
-            <tag name="zikula.block" module="ZikulaSpecModule" />
+            <tag name="zikula.block_handler" module="ZikulaSpecModule" />
         </service>
     </services>
 </container>

@@ -15,33 +15,33 @@ namespace Zikula\SpecModule\Block;
 
 use Symfony\Component\HttpFoundation\Request;
 use Zikula\SpecModule\Block\Form\Type\FooBlockType;
-use Zikula\Core\Controller\AbstractBlockController;
+use Zikula\Core\AbstractBlockHandler;
 
 /**
- * Example block to demonstrate usage of AbstractBlockController and Symfony Form.
+ * Example block to demonstrate usage of AbstractBlockHandler and Symfony Form.
  *
  * Class FooBlock
  * @package Zikula\SpecModule\Block
  */
-class FooBlock extends AbstractBlockController
+class FooBlock extends AbstractBlockHandler
 {
     // getType() intentionally unimplemented for demonstration purposes.
 
-    public function display($content)
+    public function display(array $properties)
     {
-        $content = nl2br(implode("\n", $content));
+        $content = nl2br(implode("\n", $properties));
 
         return $this->renderView('ZikulaSpecModule:Block:foo.html.twig', ['content' => $content]);
     }
 
-    public function modify(Request $request, $content)
+    public function modify(Request $request, array $properties)
     {
         $defaults = [
             'sentence' => 'The cheesecake exploded.',
             'status' => true,
             'more' => '',
         ];
-        $vars = array_merge($defaults, $content);
+        $vars = array_merge($defaults, $properties);
         $form = $this->createForm('Zikula\SpecModule\Block\Form\Type\FooBlockType', $vars);
         $form->handleRequest($request);
         if ($form->isValid()) {

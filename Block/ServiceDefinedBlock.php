@@ -13,9 +13,8 @@
 
 namespace Zikula\SpecModule\Block;
 
-use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
-use Zikula\Core\BlockControllerInterface;
+use Zikula\Core\BlockHandlerInterface;
 
 /**
  * Example block that utilizes dependencies from the container.
@@ -29,7 +28,7 @@ use Zikula\Core\BlockControllerInterface;
  * Class ServiceDefinedBlock
  * @package Zikula\SpecModule\Block
  */
-class ServiceDefinedBlock implements BlockControllerInterface
+class ServiceDefinedBlock implements BlockHandlerInterface
 {
     private $env;
 
@@ -46,12 +45,12 @@ class ServiceDefinedBlock implements BlockControllerInterface
         return 'ServiceDefined';
     }
 
-    public function display($content)
+    public function display(array $properties)
     {
         return "<div><strong>Environment: " . $this->env . "</strong></div>";
     }
 
-    public function modify(Request $request, $content)
+    public function modify(Request $request, array $properties)
     {
         return "This block provides no configurable options.";
     }

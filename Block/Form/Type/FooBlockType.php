@@ -15,6 +15,7 @@ namespace Zikula\SpecModule\Block\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
  * Class FooBlockType
@@ -40,5 +41,17 @@ class FooBlockType extends AbstractType
     public function getName()
     {
         return 'zikulaspecmodule_fooblock';
+    }
+
+    /**
+     * @param OptionsResolver $resolver
+     */
+    public function configureOptions(OptionsResolver $resolver)
+    {
+        $resolver->setDefaults([
+            'sentence' => 'The cheesecake exploded.',
+            'status' => true,
+            'more' => '',
+        ]);
     }
 }

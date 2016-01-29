@@ -34,8 +34,18 @@ class BarBlock implements BlockHandlerInterface
         return "<div><strong>Bar Block!</strong></div>";
     }
 
-    public function modify(Request $request, array $properties)
+    public function getFormClassName()
     {
-        return "This block provides no configurable options.";
+        return null;
+    }
+
+    public function getFormTemplate()
+    {
+        return '';
+    }
+
+    public function getFormOptions()
+    {
+        return [];
     }
 }

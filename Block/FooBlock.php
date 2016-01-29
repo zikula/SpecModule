@@ -25,7 +25,7 @@ use Zikula\Core\AbstractBlockHandler;
  */
 class FooBlock extends AbstractBlockHandler
 {
-    // getType() intentionally unimplemented for demonstration purposes.
+    // getType() and getFormOptions() intentionally unimplemented for demonstration purposes.
 
     public function display(array $properties)
     {
@@ -34,23 +34,13 @@ class FooBlock extends AbstractBlockHandler
         return $this->renderView('ZikulaSpecModule:Block:foo.html.twig', ['content' => $content]);
     }
 
-    public function modify(Request $request, array $properties)
+    public function getFormClassName()
     {
-        $defaults = [
-            'sentence' => 'The cheesecake exploded.',
-            'status' => true,
-            'more' => '',
-        ];
-        $vars = array_merge($defaults, $properties);
-        $form = $this->createForm('Zikula\SpecModule\Block\Form\Type\FooBlockType', $vars);
-        $form->handleRequest($request);
-        if ($form->isValid()) {
+        return 'Zikula\SpecModule\Block\Form\Type\FooBlockType';
+    }
 
-            return $form->getData();
-        }
-
-        return $this->renderView('ZikulaBlocksModule:Block:default_modify.html.twig', [
-            'form' => $form->createView(),
-        ]);
+    public function getFormTemplate()
+    {
+        return 'ZikulaBlocksModule:Block:default_modify.html.twig';
     }
 }

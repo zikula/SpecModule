@@ -13,8 +13,7 @@
 
 namespace Zikula\SpecModule\Block;
 
-use Symfony\Component\HttpFoundation\Request;
-use Zikula\Core\BlockHandlerInterface;
+use Zikula\BlocksModule\BlockHandlerInterface;
 
 /**
  * Example block that utilizes dependencies from the container.

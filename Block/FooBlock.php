@@ -13,9 +13,7 @@
 
 namespace Zikula\SpecModule\Block;
 
-use Symfony\Component\HttpFoundation\Request;
-use Zikula\SpecModule\Block\Form\Type\FooBlockType;
-use Zikula\Core\AbstractBlockHandler;
+use Zikula\BlocksModule\AbstractBlockHandler;
 
 /**
  * Example block to demonstrate usage of AbstractBlockHandler and Symfony Form.
@@ -25,22 +23,17 @@ use Zikula\Core\AbstractBlockHandler;
  */
 class FooBlock extends AbstractBlockHandler
 {
-    // getType() and getFormOptions() intentionally unimplemented for demonstration purposes.
+    // getType(), getFormTemplate() and getFormOptions() intentionally unimplemented for demonstration purposes.
 
     public function display(array $properties)
     {
         $content = nl2br(implode("\n", $properties));
 
-        return $this->renderView('ZikulaSpecModule:Block:foo.html.twig', ['content' => $content]);
+        return $this->renderView('@ZikulaSpecModule/Block/foo.html.twig', ['content' => $content]);
     }
 
     public function getFormClassName()
     {
         return 'Zikula\SpecModule\Block\Form\Type\FooBlockType';
-    }
-
-    public function getFormTemplate()
-    {
-        return 'ZikulaBlocksModule:Block:default_modify.html.twig';
     }
 }

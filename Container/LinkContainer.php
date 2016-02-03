@@ -43,7 +43,7 @@ class LinkContainer implements LinkContainerInterface
             return $this->$method();
         }
 
-        return array();
+        return [];
     }
 
     /**
@@ -53,12 +53,13 @@ class LinkContainer implements LinkContainerInterface
      */
     private function getAdmin()
     {
-        $links = array();
+        $links = [];
         if (\SecurityUtil::checkPermission('ZikulaSpecModule::', '::', ACCESS_READ)) {
-            $links[] = array(
+            $links[] = [
                 'url' => $this->router->generate('zikulaspecmodule_bar_index'),
                 'text' => $this->translator->__('Spec Admin'),
-                'icon' => 'wrench');
+                'icon' => 'wrench'
+            ];
         }
 
         return $links;
@@ -71,11 +72,29 @@ class LinkContainer implements LinkContainerInterface
      */
     private function getUser()
     {
-        $links = array();
-        $links[] = array(
+        $links = [];
+        $links[] = [
             'url' => $this->router->generate('zikulaspecmodule_foo_index'),
             'text' => $this->translator->__('Spec User'),
-            'icon' => 'check-square-o');
+            'icon' => 'check-square-o'
+        ];
+
+        return $links;
+    }
+
+    /**
+     * get the User account links.
+     *
+     * @return array
+     */
+    private function getAccount()
+    {
+        $links = [];
+        $links[] = [
+            'url' => $this->router->generate('zikulaspecmodule_foo_index'),
+            'text' => $this->translator->__('Spec Module Index'),
+            'icon' => 'check-square-o'
+        ];
 
         return $links;
     }

@@ -7,7 +7,7 @@ use Zikula\Core\Controller\AbstractController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route; // used in annotations - do not remove
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method; // used in annotations - do not remove
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template; // used in annotations - do not remove
-use Zikula\Core\Theme\Annotation\Theme;
+use Zikula\ThemeModule\Engine\Annotation\Theme;
 
 class BarController extends AbstractController
 {

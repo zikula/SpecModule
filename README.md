@@ -1,3 +1,4 @@
+[![StyleCI](https://styleci.io/repos/37886930/shield)](https://styleci.io/repos/37886930)
 ZikulaSpecModule
 ============
 

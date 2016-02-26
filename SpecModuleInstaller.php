@@ -14,8 +14,7 @@ class SpecModuleInstaller extends AbstractExtensionInstaller
 
     public function install()
     {
-        $hookContainer = $this->hookApi->getHookContainerInstance($this->bundle->getMetaData());
-        $this->hookApi->registerSubscriberBundles($hookContainer->getHookSubscriberBundles());
+        $this->hookApi->installSubscriberHooks($this->bundle->getMetaData());
 
         return true;
     }
@@ -27,8 +26,7 @@ class SpecModuleInstaller extends AbstractExtensionInstaller
 
     public function uninstall()
     {
-        $hookContainer = $this->hookApi->getHookContainerInstance($this->bundle->getMetaData());
-        $this->hookApi->unregisterSubscriberBundles($hookContainer->getHookSubscriberBundles());
+        $this->hookApi->uninstallSubscriberHooks($this->bundle->getMetaData());
 
         return true;
     }

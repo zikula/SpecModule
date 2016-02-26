@@ -18,7 +18,7 @@
     },
     "extra": {
         "zikula": {
-            "core-compatibility": ">=1.4.1",
+            "core-compatibility": ">=1.4.2",
             "class": "Zikula\\SpecModule\\ZikulaSpecModule",
             "displayname": "SpecModule",
             "url": "spec",

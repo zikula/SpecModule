@@ -5,5 +5,5 @@ provided in `services.xml`. The class must implement `\Zikula\Core\LinkContainer
 
 ### HookContainer.php
 The HookContainer class sets up hook bundles that can be used to loosely connect extensions together via a specialized
-event system. The class must extend `\Zikula\Component\HookDispatcher\AbstractContainer` and implement one method:
+event system. The class must extend `\Zikula\Bundle\HookBundle\AbstractHookContainer` and implement one method:
 `setupHookBundles()`, which instantiates and registers hook bundles.

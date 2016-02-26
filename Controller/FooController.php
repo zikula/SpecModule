@@ -23,6 +23,6 @@ class FooController extends AbstractController
 
 //        return $this->render('ZikulaSpecModule:Foo:index.html.twig', array('name' => $name));
 //        return $this->render('@ZikulaSpecModule/Foo/index.html.twig', array('name' => $name));
-        return ['name' => $name, 'perms' => ['old' => $oldPerm, 'new' =>$perm]];
+        return ['name' => $name, 'perms' => ['old' => $oldPerm, 'new' => $perm]];
     }
 }

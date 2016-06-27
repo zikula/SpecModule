@@ -2,16 +2,10 @@
 
 namespace Zikula\SpecModule;
 
-use Zikula\Core\AbstractBundle;
 use Zikula\Core\AbstractExtensionInstaller;
 
 class SpecModuleInstaller extends AbstractExtensionInstaller
 {
-    public function setBundle(AbstractBundle $bundle)
-    {
-        $this->bundle = $bundle;
-    }
-
     public function install()
     {
         $this->hookApi->installSubscriberHooks($this->bundle->getMetaData());

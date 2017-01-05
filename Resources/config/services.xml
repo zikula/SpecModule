@@ -15,10 +15,5 @@
             <argument>%kernel.environment%</argument>
             <tag name="zikula.block_handler" module="ZikulaSpecModule" />
         </service>
-        
-        <service id="zikula.spec_module.command.hello" class="Zikula\SpecModule\Command\HelloCommand">
-            <tag name="console.command"/>
-        </service>
-            
     </services>
 </container>

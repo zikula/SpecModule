@@ -35,5 +35,4 @@ class HelloCommand extends ContainerAwareCommand
         $io = new SymfonyStyle($input, $output);
         $io->text($this->translator->__('Hello, world.'));
     }
-
 }

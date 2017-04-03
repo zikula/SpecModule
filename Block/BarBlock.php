@@ -17,7 +17,6 @@ use Zikula\BlocksModule\BlockHandlerInterface;
  * Example block to demonstrate a 'bare bones' block requiring only the interface.
  *
  * Class BarBlock
- * @package Zikula\SpecModule\Block
  */
 class BarBlock implements BlockHandlerInterface
 {

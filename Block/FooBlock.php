@@ -17,7 +17,6 @@ use Zikula\BlocksModule\AbstractBlockHandler;
  * Example block to demonstrate usage of AbstractBlockHandler and Symfony Form.
  *
  * Class FooBlock
- * @package Zikula\SpecModule\Block
  */
 class FooBlock extends AbstractBlockHandler
 {

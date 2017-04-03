@@ -23,7 +23,6 @@ use Zikula\BlocksModule\BlockHandlerInterface;
  *         </service>
  *
  * Class ServiceDefinedBlock
- * @package Zikula\SpecModule\Block
  */
 class ServiceDefinedBlock implements BlockHandlerInterface
 {

@@ -17,7 +17,6 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
  * Class FooBlockType
- * @package Zikula\SpecModule\Block\Form\Type
  */
 class FooBlockType extends AbstractType
 {

@@ -20,7 +20,8 @@ class FooController extends AbstractController
 {
     /**
      * @Route("/hello/{name}")
-     * @Template
+     * @Template("ZikulaSpecModule:Foo:index.html.twig")
+     *
      * @param Request $request
      * @param string $name
      * @return array

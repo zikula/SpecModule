@@ -22,7 +22,8 @@ class BarController extends AbstractController
     /**
      * @Route("/admin/hello/{name}")
      * @Theme("admin")
-     * @Template
+     * @Template("ZikulaSpecModule:Bar:index.html.twig")
+     *
      * @param Request $request
      * @param string $name
      * @return array

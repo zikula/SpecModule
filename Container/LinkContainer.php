@@ -21,6 +21,7 @@ class LinkContainer implements LinkContainerInterface
      * @var Translator
      */
     private $translator;
+
     /**
      * @var RouterInterface
      */

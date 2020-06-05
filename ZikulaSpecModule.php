@@ -15,4 +15,14 @@ use Zikula\Core\AbstractModule;
 
 class ZikulaSpecModule extends AbstractModule
 {
+    /**
+     * This function is necesssary for console commands in Command/*Command.php
+     * to be recognized by app/console.php
+     *
+     * @return boolean
+     */
+    protected function hasCommands()
+    {
+        return true;
+    }
 }
